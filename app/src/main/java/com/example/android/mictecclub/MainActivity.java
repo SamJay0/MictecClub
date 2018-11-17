@@ -12,10 +12,12 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
-
+private DrawerLayout drawer;
+private ActionBarDrawerToggle toggle;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,12 +34,12 @@ public class MainActivity extends AppCompatActivity
             }
         });
 
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
-        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
-                this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
+         drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+         toggle = new ActionBarDrawerToggle(
+                this, drawer, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.addDrawerListener(toggle);
         toggle.syncState();
-
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
     }
@@ -64,8 +66,10 @@ public class MainActivity extends AppCompatActivity
         // Handle action bar item clicks here. The action bar will
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
+        if(toggle.onOptionsItemSelected(item)){
+            return true;
+        }
         int id = item.getItemId();
-
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
             return true;
@@ -80,18 +84,40 @@ public class MainActivity extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if (id == R.id.nav_camera) {
-            // Handle the camera action
-        } else if (id == R.id.nav_gallery) {
+        if (id == R.id.db) {
+            Toast toast=Toast.makeText(getApplicationContext(),"dashboard clicked",Toast.LENGTH_SHORT);
+            toast.show();
+        } else if (id == R.id.events) {
+            Toast toast=Toast.makeText(getApplicationContext(),"events clicked",Toast.LENGTH_SHORT);
+            toast.show();
 
-        } else if (id == R.id.nav_slideshow) {
+        } else if (id == R.id.classes) {
+            Toast toast=Toast.makeText(getApplicationContext(),"classes clicked",Toast.LENGTH_SHORT);
+            toast.show();
 
-        } else if (id == R.id.nav_manage) {
+        } else if (id == R.id.leaders) {
+            Toast toast=Toast.makeText(getApplicationContext(),"leaders clicked",Toast.LENGTH_SHORT);
+            toast.show();
 
-        } else if (id == R.id.nav_share) {
+        } else if (id == R.id.members) {
+            Toast toast=Toast.makeText(getApplicationContext(),"members clicked",Toast.LENGTH_SHORT);
+            toast.show();
 
-        } else if (id == R.id.nav_send) {
+        } else if (id == R.id.gallery) {
+            Toast toast=Toast.makeText(getApplicationContext(),"gallery clicked",Toast.LENGTH_SHORT);
+            toast.show();
 
+        }else if (id == R.id.help) {
+            Toast toast=Toast.makeText(getApplicationContext(),"help clicked",Toast.LENGTH_SHORT);
+            toast.show();
+
+        }else if(id==R.id.about){
+            Toast toast=Toast.makeText(getApplicationContext(),"about clicked",Toast.LENGTH_SHORT);
+            toast.show();
+        }
+        else if(id==R.id.action_settings){
+            Toast toast=Toast.makeText(getApplicationContext(),"settings clicked",Toast.LENGTH_SHORT);
+            toast.show();
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
