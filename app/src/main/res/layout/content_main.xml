@@ -1,19 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_gravity="center"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="com.example.android.mictecclub.MainActivity"
     tools:showIn="@layout/app_bar_main">
 
-    <EditText
-        android:id="@+id/edit_text"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="@string/enter_name"/>
+    <ImageView
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="155dp"
+        android:layout_marginBottom="156dp"
+        android:scaleType="centerInside"
+        android:src="@drawable/mictec" />
 
-
-
-</android.support.constraint.ConstraintLayout>
+</RelativeLayout>
