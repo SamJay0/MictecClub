@@ -1,5 +1,6 @@
 package com.example.android.mictecclub;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -85,8 +86,11 @@ private ActionBarDrawerToggle toggle;
         int id = item.getItemId();
 
         if (id == R.id.db) {
-            Toast toast=Toast.makeText(getApplicationContext(),"dashboard clicked",Toast.LENGTH_SHORT);
-            toast.show();
+//            Toast toast=Toast.makeText(getApplicationContext(),"dashboard clicked",Toast.LENGTH_SHORT);
+//            toast.show();
+
+                startActivity(new Intent(MainActivity.this, ProfileActivity.class));
+
         } else if (id == R.id.events) {
             Toast toast=Toast.makeText(getApplicationContext(),"events clicked",Toast.LENGTH_SHORT);
             toast.show();

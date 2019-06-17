@@ -4,4 +4,8 @@
     <color name="colorPrimaryDark">#AE2121</color>
     <color name="colorAccent">#FF4081</color>
     <color name="white">#ffffff</color>
+    <color name="splashbackground">#AE2121</color>
+    <color name="grayLight">#fafafa</color>
+    <color name="startred">#df0929</color>
+    <color name="endred">#e60b25</color>
 </resources>

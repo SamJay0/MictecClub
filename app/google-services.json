@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "514041228581",
+    "firebase_url": "https://mictecclub-64bd9.firebaseio.com",
+    "project_id": "mictecclub-64bd9",
+    "storage_bucket": "mictecclub-64bd9.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:514041228581:android:e013e2a9481f8b70",
+        "android_client_info": {
+          "package_name": "com.example.android.mictecclub"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "514041228581-914ve6m1fcdeg3249f2imul0vb47609f.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.android.mictecclub",
+            "certificate_hash": "f90743c9d0e37c15b988658ecd75af311ae46473"
+          }
+        },
+        {
+          "client_id": "514041228581-ltngptcfbfsfofhnr5pkmbrdolrfs7ot.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCEbh0FKOz4RrEm_iUc6lGLQLcWL7CGl6U"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "514041228581-ltngptcfbfsfofhnr5pkmbrdolrfs7ot.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
