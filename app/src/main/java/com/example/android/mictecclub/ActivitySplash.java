@@ -5,10 +5,15 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.transition.Explode;
+import android.util.Log;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
+import android.widget.Toast;
+
+import com.google.android.gms.auth.api.signin.GoogleSignIn;
+import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
 
 import java.util.Timer;
 import java.util.TimerTask;
@@ -19,6 +24,8 @@ import java.util.TimerTask;
 
 public class ActivitySplash extends AppCompatActivity {
     private ImageView splashpic;
+    private String TAG="Paul mburu android";
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -59,4 +66,5 @@ public class ActivitySplash extends AppCompatActivity {
 //        };
 //        new Timer().schedule(task,2000);
     }
+
 }
