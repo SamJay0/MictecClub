@@ -19,6 +19,7 @@
             android:orientation="vertical">
 
             <ImageView
+                android:id="@+id/profile_image"
                 android:layout_width="125dp"
                 android:layout_height="110dp"
                 android:layout_gravity="center_horizontal"
@@ -26,6 +27,7 @@
                 android:src="@drawable/profile_icon" />
 
             <TextView
+                android:id="@+id/profile_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
@@ -35,6 +37,7 @@
                 android:textSize="21sp"
                 android:textStyle="bold" />
             <TextView
+                android:id="@+id/profile_email"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
@@ -220,6 +223,7 @@
         </LinearLayout>
 
         <Button
+            android:id="@+id/sign_out"
             android:background="@drawable/buttonstyle"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="25dp"

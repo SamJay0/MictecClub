@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.util.Log;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -15,10 +16,15 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Toast;
 
+import com.google.android.gms.auth.api.signin.GoogleSignIn;
+import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
+
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 private DrawerLayout drawer;
 private ActionBarDrawerToggle toggle;
+    private String TAG="MictecClub-> APP";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -89,7 +95,16 @@ private ActionBarDrawerToggle toggle;
 //            Toast toast=Toast.makeText(getApplicationContext(),"dashboard clicked",Toast.LENGTH_SHORT);
 //            toast.show();
 
-                startActivity(new Intent(MainActivity.this, ProfileActivity.class));
+            GoogleSignInAccount alreadyloggedAccount = GoogleSignIn.getLastSignedInAccount(this);
+            if (alreadyloggedAccount != null) {
+                Toast.makeText(this, "Already Logged In", Toast.LENGTH_SHORT).show();
+                onLoggedIn(alreadyloggedAccount);
+            } else {
+                Log.d(TAG, "Not logged in");
+                startActivity(new Intent(MainActivity.this, LoginInActivity.class));
+            }
+
+
 
         } else if (id == R.id.events) {
             Toast toast=Toast.makeText(getApplicationContext(),"events clicked",Toast.LENGTH_SHORT);
@@ -128,4 +143,13 @@ private ActionBarDrawerToggle toggle;
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
+
+    private void onLoggedIn(GoogleSignInAccount googleSignInAccount) {
+        Intent intent = new Intent(this, ProfileActivity.class);
+        intent.putExtra(ProfileActivity.GOOGLE_ACCOUNT, googleSignInAccount);
+
+        startActivity(intent);
+        finish();
+    }
+
 }

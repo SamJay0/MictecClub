@@ -15,6 +15,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "514041228581-g0nsnmravns233efcfnr76d4dpm65cjn.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.android.mictecclub",
+            "certificate_hash": "b488dac6d7518acca5e948d865418d32d998d6b9"
+          }
+        },
+        {
           "client_id": "514041228581-914ve6m1fcdeg3249f2imul0vb47609f.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
@@ -33,20 +41,13 @@
         }
       ],
       "services": {
-        "analytics_service": {
-          "status": 1
-        },
         "appinvite_service": {
-          "status": 2,
           "other_platform_oauth_client": [
             {
-              "client_id": "514041228581-ltngptcfbfsfofhnr5pkmbrdolrfs7ot.apps.googleusercontent.com",
+              "client_id": "514041228581-33igq3ac7lrsvj4vtmvfuraahhpk12rk.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
-        },
-        "ads_service": {
-          "status": 2
         }
       }
     }
