@@ -46,13 +46,13 @@ public class LoginInActivity extends AppCompatActivity {
             }
         });
 
-        btnLogin=(Button) findViewById(R.id.button_login);
-        btnLogin.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(LoginInActivity.this, ProfileActivity.class));
-            }
-        });
+//        btnLogin=(Button) findViewById(R.id.button_login);
+//        btnLogin.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                startActivity(new Intent(LoginInActivity.this, ProfileActivity.class));
+//            }
+//        });
 
     }
 
