@@ -13,8 +13,12 @@
     <ImageView
         android:layout_width="200dp"
         android:layout_height="200dp"
-        android:src="@drawable/background"
-        android:layout_centerInParent="true"
-        android:scaleType="centerInside"/>
+        android:layout_alignParentTop="true"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="155dp"
+        android:layout_marginBottom="156dp"
+        android:scaleType="centerInside"
+        android:src="@drawable/mictec" />
 
 </RelativeLayout>
